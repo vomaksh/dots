@@ -21,7 +21,7 @@ end
 
 task :uninstall do
   FileUtils.rm([
-    "#{target}/.config/alacritty"
+    "#{target}/.config/alacritty",
     "#{target}/.config/gammastep",
     "#{target}/.config/nvim",
     "#{target}/.config/sway",
