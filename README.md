@@ -13,3 +13,7 @@ It includes following configurations:
 - waybar
 - wlogout
 - zsh
+
+### License
+
+MIT
