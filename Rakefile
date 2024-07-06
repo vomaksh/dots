@@ -17,6 +17,12 @@ task :install do
 
   # terminal
   FileUtils.ln_s("#{base_path}/alacritty", "#{target}/.config/alacritty")
+
+  # chromium 
+  FileUtils.ln_s("#{base_path}/chromium/chromium-flags.conf", "#{target}/.config/chromium-flags.conf")
+
+  # chrome
+  FileUtils.ln_s("#{base_path}/chrome/chrome-flags.conf", "#{target}/.config/chrome-flags.conf")
 end
 
 task :uninstall do
@@ -29,5 +35,7 @@ task :uninstall do
     "#{target}/.config/tmux",
     "#{target}/.config/waybar",
     "#{target}/.config/wlogout",
+    "#{target}/.config/chromium-flags.conf",
+    "#{target}/.config/chrome-flags.conf",
   ])
 end
