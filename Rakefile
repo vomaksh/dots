@@ -11,6 +11,12 @@ task :install do
   FileUtils.ln_s("#{base_path}/wlogout", "#{target}/.config/wlogout")
   FileUtils.ln_s("#{base_path}/gammastep", "#{target}/.config/gammastep")
 
+  # niri
+  FileUtils.ln_s("#{base_path}/niri", "#{target}/.config/niri")
+  FileUtils.ln_s("#{base_path}/fuzzel", "#{target}/.config/fuzzel")
+  FileUtils.ln_s("#{base_path}/mako", "#{target}/.config/mako")
+  FileUtils.ln_s("#{base_path}/qt5ct", "#{target}/.config/qt5ct")
+
   # neovim and tmux
   FileUtils.ln_s("#{base_path}/nvim", "#{target}/.config/nvim")
   FileUtils.ln_s("#{base_path}/tmux", "#{target}/.config/tmux")
@@ -18,11 +24,6 @@ task :install do
   # terminal
   FileUtils.ln_s("#{base_path}/alacritty", "#{target}/.config/alacritty")
 
-  # chromium 
-  FileUtils.ln_s("#{base_path}/chromium/chromium-flags.conf", "#{target}/.config/chromium-flags.conf")
-
-  # chrome
-  FileUtils.ln_s("#{base_path}/chrome/chrome-flags.conf", "#{target}/.config/chrome-flags.conf")
 end
 
 task :uninstall do
@@ -35,7 +36,9 @@ task :uninstall do
     "#{target}/.config/tmux",
     "#{target}/.config/waybar",
     "#{target}/.config/wlogout",
-    "#{target}/.config/chromium-flags.conf",
-    "#{target}/.config/chrome-flags.conf",
+    "#{target}/.config/niri",
+    "#{target}/.config/fuzzel",
+    "#{target}/.config/mako",
+    "#{target}/.config/qt5ct",
   ])
 end
