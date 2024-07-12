@@ -1,9 +1,10 @@
 
 {
     "position": "top", // Waybar position (top|bottom|left|right)
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "pulseaudio", "network", "backlight","battery", "custom/wlogout"],
+    "layer": "top",
+    "modules-left": ["tray"],
+    "modules-center": [],
+    "modules-right": ["clock", "pulseaudio", "network", "backlight","battery", "custom/wlogout"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -46,7 +47,7 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "󰤨 {essid} ({signalStrength}%)",
+        "format-wifi": "󰤨  {essid} ({signalStrength}%)",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ",
