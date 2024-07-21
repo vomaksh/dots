@@ -1,4 +1,3 @@
-
 {
     "position": "top", // Waybar position (top|bottom|left|right)
     "layer": "top",
@@ -11,6 +10,9 @@
             "activated": "",
             "deactivated": ""
         }
+    },
+    "sway/workspaces": {
+      "format": "{icon}"
     },
     "tray": {
         "spacing": 10

@@ -21,6 +21,15 @@ vim.opt.relativenumber = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.wo.wrap = false
 
+-- configure folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldtext = "v:folddashes.substitute(getline(v:foldstart),'/\\*\\\\|\\*/\\\\|{{{\\d\\=','','g')"
+vim.opt.foldnestmax = 2
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
+
 -- setup plugins with lazy.nvim
 require("lazy").setup({
   "nvim-tree/nvim-tree.lua",

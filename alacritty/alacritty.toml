@@ -3,16 +3,13 @@ import = [
 ]
 
 [font]
-normal      = { family = "Cascadia Code NF", style = "Regular" }
-italic      = { family = "Cascadia Code NF", style = "Italic" }
-bold        = { family = "Cascadia Code NF", style = "Bold" }
-bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
+normal      = { family = "0xProto Nerd Font" }
 size = 12
 
 [window]
 dynamic_padding = true
-# opacity = 0.9
-# blur = true
+opacity = 0.95
+blur = true
 
 [colors]
 draw_bold_text_with_bright_colors = true

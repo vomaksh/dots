@@ -3,6 +3,6 @@ show-failed-attempts
 ignore-empty-password
 font=Google Sans
 font-size=16
-image=/home/ginruh/Pictures/elementary-backgrounds/Photo of Valley.jpg
+image=~/Pictures/elementary-backgrounds/Photo of Valley.jpg
 indicator-caps-lock
 indicator-idle-visible

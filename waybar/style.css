@@ -34,7 +34,7 @@ window#waybar.solo {
 */
 
 /* window#waybar.termite {
-    background-color: #000000;
+    background-color: #000001;
 }
 
 window#waybar.chromium {
@@ -43,7 +43,7 @@ window#waybar.chromium {
 } */
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0px 4px;
     /* padding: 0 0.4em; */
     /* background-color: transparent; */
     color: #ffffff;
@@ -51,10 +51,9 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-  background-color: #262626;
+  background-color: #404040;
   color:#fff;
 }
-
 
 #clock,
 #battery,
@@ -69,6 +68,7 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #custom-wlogout,
+#workspaces,
 #mpd {
     padding: 4px 10px;
     margin: 0px 3px;
