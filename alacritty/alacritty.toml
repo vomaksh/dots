@@ -8,8 +8,9 @@ size = 12
 
 [window]
 dynamic_padding = true
-opacity = 0.95
+opacity = 1
 blur = true
+decorations = "none"
 
 [colors]
 draw_bold_text_with_bright_colors = true
