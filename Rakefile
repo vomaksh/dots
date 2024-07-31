@@ -23,12 +23,14 @@ task :install do
 
   # terminal
   FileUtils.ln_s("#{base_path}/alacritty", "#{target}/.config/alacritty")
+  FileUtils.ln_s("#{base_path}/posh", "#{target}/.config/posh")
 
 end
 
 task :uninstall do
   FileUtils.rm([
     "#{target}/.config/alacritty",
+    "#{target}/.config/posh",
     "#{target}/.config/gammastep",
     "#{target}/.config/nvim",
     "#{target}/.config/sway",

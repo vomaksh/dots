@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
--- set leader
+--set leader
 vim.g.mapleader = " "
 
 -- setting vim options
@@ -94,14 +94,52 @@ require("lazy").setup({
   "mfussenegger/nvim-lint",
   "mfussenegger/nvim-dap",
   "rcarriga/nvim-dap-ui",
-  "folke/trouble.nvim",
+  {
+    "folke/trouble.nvim",
+    opts = {},
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+      {
+        "<leader>xX",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "Buffer Diagnostics (Trouble)",
+      },
+      {
+        "<leader>cs",
+        "<cmd>Trouble symbols toggle focus=false<cr>",
+        desc = "Symbols (Trouble)",
+      },
+      {
+        "<leader>cl",
+        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+        desc = "LSP Definitions / references / ... (Trouble)",
+      },
+      {
+        "<leader>xL",
+        "<cmd>Trouble loclist toggle<cr>",
+        desc = "Location List (Trouble)",
+      },
+      {
+        "<leader>xQ",
+        "<cmd>Trouble qflist toggle<cr>",
+        desc = "Quickfix List (Trouble)",
+      },
+    },
+  },
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   -- mini.nvim plugins
   { "echasnovski/mini.starter", version = false },
   { "echasnovski/mini.comment", version = false },
   { "echasnovski/mini.pairs", version = false },
   { "echasnovski/mini.clue", version = false },
-  { "echasnovski/mini.animate", version = false },
+  { "echasnovski/mini.animate", opts = {}, version = false },
+  { "echasnovski/mini-git", opts = {}, main = "mini.git", version = false },
+  { "echasnovski/mini.diff", opts = {}, version = false },
 })
 
 -- configuration of plugins start here
@@ -278,11 +316,11 @@ local lsp_list = {
   "emmet_ls",
   "sqlls",
   "jsonls",
-  "efm",
+  -- "efm",
   "awk_ls",
   "bashls",
   "cssls",
-  "grammarly",
+  -- "grammarly",
   "graphql",
   "html",
   "marksman",
@@ -327,26 +365,8 @@ local on_attach = function()
   vim.keymap.set("n", "E", vim.diagnostic.open_float, { buffer = 0 })
   vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", { buffer = 0 })
 
-  -- trouble plugin which displays diagnostics
-  vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
-  vim.keymap.set("n", "<leader>xw", function()
-    require("trouble").open("workspace_diagnostics")
-  end)
-  vim.keymap.set("n", "<leader>xd", function()
-    require("trouble").open("document_diagnostics")
-  end)
-  vim.keymap.set("n", "<leader>xq", function()
-    require("trouble").open("quickfix")
-  end)
-  vim.keymap.set("n", "<leader>xl", function()
-    require("trouble").open("loclist")
-  end)
-  vim.keymap.set("n", "gR", function()
-    require("trouble").open("lsp_references")
-  end)
-
   -- code action
-  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = 0 })
+  vim.keymap.set("n", "<leader>cc", vim.lsp.buf.code_action, { buffer = 0 })
 
   -- format
   vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { buffer = 0 })
