@@ -17,6 +17,7 @@ It includes following configurations:
 - gammastep (night light)
 - qt5ct (qt5 settings)
 - zsh (zshell)
+- posh (shell prompt)
 
 ### License
 
