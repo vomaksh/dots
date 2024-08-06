@@ -351,6 +351,9 @@ require("mason-tool-installer").setup({
   ensure_installed = formatters_linters_list,
 })
 
+vim.keymap.set({ "n", "v" }, "<M-y>", [["+Y]])
+vim.keymap.set({ "n", "v" }, "<M-p>", [["+P]])
+
 local on_attach = function()
   -- lsp
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
