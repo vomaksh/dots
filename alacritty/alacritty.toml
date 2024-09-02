@@ -3,7 +3,8 @@ import = [
 ]
 
 [font]
-normal      = { family = "0xProto Nerd Font" }
+# normal = { family = "0xProto" }
+normal = { family = "Cascadia Code" }
 size = 12
 
 [window]

@@ -1,0 +1,18 @@
+.panel-workspace-indicator {
+  padding: 4px 8px;
+}
+
+.panel-workspace-indicator-box .workspace {
+  width: 100px;
+}
+
+.panel-workspace-indicator,
+.panel-workspace-indicator-box .workspace {
+  margin: 0px 4px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.workspace-indicator-active {
+  background-color: #404040;
+}
