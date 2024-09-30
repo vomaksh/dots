@@ -11,7 +11,7 @@ size = 12
 dynamic_padding = true
 opacity = 1
 blur = true
-decorations = "none"
+# decorations = "none"
 
 [colors]
 draw_bold_text_with_bright_colors = true

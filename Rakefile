@@ -4,6 +4,9 @@ target = ENV["HOME"]
 base_path = FileUtils.pwd()
 
 task :install do
+  # .zsh
+  FileUtils.ln_s("#{base_path}/zsh/.zshrc", "#{target}/.zshrc")
+
   # sway
   FileUtils.ln_s("#{base_path}/sway", "#{target}/.config/sway")
   FileUtils.ln_s("#{base_path}/swaylock", "#{target}/.config/swaylock")
@@ -29,6 +32,7 @@ end
 
 task :uninstall do
   FileUtils.rm([
+    "#{target}/.zshrc",
     "#{target}/.config/alacritty",
     "#{target}/.config/posh",
     "#{target}/.config/gammastep",
