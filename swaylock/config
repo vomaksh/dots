@@ -1,8 +1,8 @@
 daemonize
 show-failed-attempts
 ignore-empty-password
-font=Google Sans
+font=Inter Variable
 font-size=16
-image=~/Pictures/elementary-backgrounds/Photo of Valley.jpg
+image=~/Pictures/Unsplash/iswanto-arif-OJ74pFtrYi0-unsplash.jpg
 indicator-caps-lock
 indicator-idle-visible
