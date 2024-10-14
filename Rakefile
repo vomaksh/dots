@@ -27,6 +27,7 @@ task :install do
   # terminal
   FileUtils.ln_s("#{base_path}/alacritty", "#{target}/.config/alacritty")
   FileUtils.ln_s("#{base_path}/posh", "#{target}/.config/posh")
+  FileUtils.ln_s("#{base_path}/foot", "#{target}/.config/foot")
 
 end
 
@@ -34,6 +35,7 @@ task :uninstall do
   FileUtils.rm([
     "#{target}/.zshrc",
     "#{target}/.config/alacritty",
+    "#{target}/.config/foot",
     "#{target}/.config/posh",
     "#{target}/.config/gammastep",
     "#{target}/.config/nvim",

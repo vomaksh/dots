@@ -1,9 +1,12 @@
 import = [
-  "~/.config/alacritty/themes/gnome-dark.toml"
+  "~/.config/alacritty/themes/github-dark-default.toml"
 ]
 
 [font]
-normal = { family = "Cascadia Code" }
+# normal = { family = "Cascadia Code" }
+# normal = { family = "FantasqueSansM Nerd Font" }
+# normal = { family = "FantasqueSansM Nerd Font" }
+normal = { family = "BlexMono Nerd Font Medium" }
 size = 12
 
 [window]
