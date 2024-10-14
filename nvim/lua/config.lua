@@ -41,35 +41,26 @@ require("lazy").setup({
   "kevinhwang91/nvim-ufo",
   {
     "Shatur/neovim-ayu",
-    lazy = false,
-    priority = 1000,
-    config = function ()
-      local colors = require("ayu.colors")
-      colors.generate(true)
-      require("ayu").setup({
-        mirage = true,
-        overrides = function()
-          return {
-            Comment = { fg = colors.comment },
-            Normal = { bg = "None" },
-            ColorColumn = { bg = "None" },
-            SignColumn = { bg = "None" },
-            Folded = { bg = "None" },
-            FoldColumn = { bg = "None" },
-            CursorLine = { bg = "None" },
-            CursorColumn = { bg = "None" },
-            WhichKeyFloat = { bg = "None" },
-            VertSplit = { bg = "None" },
-          }
-        end,
-      })
-      vim.cmd("colorscheme ayu")
-    end
+    -- lazy = false,
+    -- priority = 1000,
   },
   {
     "projekt0n/github-nvim-theme",
     lazy = false,
     priority = 1000,
+    config = function()
+      require("github-theme").setup({
+        options = {
+          transparent = true,
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            types = "italic,bold",
+          },
+        },
+      })
+      vim.cmd("colorscheme github_dark_default")
+    end,
   },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   {
@@ -220,26 +211,26 @@ vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFocus<cr>", {})
 --   })
 --   vim.cmd("colorscheme github_light")
 -- else
-local colors = require("ayu.colors")
-colors.generate(true)
-require("ayu").setup({
-  mirage = true,
-  overrides = function()
-    return {
-      Comment = { fg = colors.comment },
-      Normal = { bg = "None" },
-      ColorColumn = { bg = "None" },
-      SignColumn = { bg = "None" },
-      Folded = { bg = "None" },
-      FoldColumn = { bg = "None" },
-      CursorLine = { bg = "None" },
-      CursorColumn = { bg = "None" },
-      WhichKeyFloat = { bg = "None" },
-      VertSplit = { bg = "None" },
-    }
-  end,
-})
-vim.cmd("colorscheme ayu")
+-- local colors = require("ayu.colors")
+-- colors.generate(true)
+-- require("ayu").setup({
+--   mirage = true,
+--   overrides = function()
+--     return {
+--       Comment = { fg = colors.comment },
+--       Normal = { bg = "None" },
+--       ColorColumn = { bg = "None" },
+--       SignColumn = { bg = "None" },
+--       Folded = { bg = "None" },
+--       FoldColumn = { bg = "None" },
+--       CursorLine = { bg = "None" },
+--       CursorColumn = { bg = "None" },
+--       WhichKeyFloat = { bg = "None" },
+--       VertSplit = { bg = "None" },
+--     }
+--   end,
+-- })
+-- vim.cmd("colorscheme ayu")
 -- end
 
 -- require("kanagawa").setup({
