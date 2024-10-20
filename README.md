@@ -1,4 +1,4 @@
-## dotfiles
+## vomaksh/dotfiles
 
 Configuration files of various tools I use which make life easier.
 
