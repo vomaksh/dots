@@ -89,6 +89,7 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
+    off
     scale 1.5
 }
 

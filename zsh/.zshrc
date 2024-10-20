@@ -103,12 +103,17 @@
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls=eza
+alias ls="eza --icons --hyperlink"
+alias wezterm="flatpak run org.wezfurlong.wezterm"
 
 export PATH="$PATH:/home/vomaksh/.local/bin:/home/vomaksh/bin"
 alias lzd='lazydocker'
 alias lzg='lazygit'
 eval "$(~/.local/bin/mise activate zsh)"
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # posh for prompt
 eval "$(oh-my-posh init zsh --config ~/.config/posh/themes/pure.omp.json)"
