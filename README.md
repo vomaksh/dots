@@ -5,6 +5,8 @@ Configuration files of various tools I use which make life easier.
 It includes following configurations:
 
 - alacritty (terminal)
+- wezterm (terminal)
+- foot (terminal)
 - fuzzel (app menu)
 - mako (notification daemon)
 - nvim (code editor)
@@ -16,6 +18,7 @@ It includes following configurations:
 - wlogout (logout menu)
 - gammastep (night light)
 - qt5ct (qt5 settings)
+- qt6ct (qt6 settings)
 - zsh (zshell)
 - posh (shell prompt)
 

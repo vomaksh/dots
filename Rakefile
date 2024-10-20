@@ -18,10 +18,15 @@ task :install do
   FileUtils.ln_s("#{base_path}/niri", "#{target}/.config/niri")
   FileUtils.ln_s("#{base_path}/fuzzel", "#{target}/.config/fuzzel")
   FileUtils.ln_s("#{base_path}/mako", "#{target}/.config/mako")
-  FileUtils.ln_s("#{base_path}/qt5ct", "#{target}/.config/qt5ct")
 
-  # neovim and tmux
+  # qt
+  FileUtils.ln_s("#{base_path}/qt5ct", "#{target}/.config/qt5ct")
+  FileUtils.ln_s("#{base_path}/qt6ct", "#{target}/.config/qt6ct")
+
+  # neovim
   FileUtils.ln_s("#{base_path}/nvim", "#{target}/.config/nvim")
+
+  # tmux
   FileUtils.ln_s("#{base_path}/tmux", "#{target}/.config/tmux")
 
   # terminal
@@ -29,7 +34,6 @@ task :install do
   FileUtils.ln_s("#{base_path}/wezterm", "#{target}/.config/wezterm")
   FileUtils.ln_s("#{base_path}/posh", "#{target}/.config/posh")
   FileUtils.ln_s("#{base_path}/foot", "#{target}/.config/foot")
-
 end
 
 task :uninstall do
@@ -50,5 +54,6 @@ task :uninstall do
     "#{target}/.config/fuzzel",
     "#{target}/.config/mako",
     "#{target}/.config/qt5ct",
+    "#{target}/.config/qt6ct",
   ])
 end
