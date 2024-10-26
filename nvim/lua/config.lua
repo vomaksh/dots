@@ -20,15 +20,20 @@ vim.opt.termguicolors = true
 vim.opt.relativenumber = true
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.wo.wrap = false
+vim.o.clipboard = 'unnamedplus'
 
 -- configure folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldcolumn = "0"
-vim.opt.foldtext = "v:folddashes.substitute(getline(v:foldstart),'/\\*\\\\|\\*/\\\\|{{{\\d\\=','','g')"
-vim.opt.foldnestmax = 2
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 1
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldcolumn = "0"
+-- vim.opt.foldtext = "v:folddashes.substitute(getline(v:foldstart),'/\\*\\\\|\\*/\\\\|{{{\\d\\=','','g')"
+-- vim.opt.foldnestmax = 2
+-- vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 1
+
+-- configure tab size
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 -- setup plugins with lazy.nvim
 require("lazy").setup({
