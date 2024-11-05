@@ -9,6 +9,8 @@ config.color_scheme = "GitHub Dark"
 -- config.font = wezterm.font("BlexMono Nerd Font", { weight = "Medium" })
 config.font = wezterm.font("Cascadia Code")
 config.font_size = 12.5
+-- config.font_size = 13
+-- config.font_size = 13.5
 
 -- remove terminal padding
 config.window_padding = {

@@ -1,15 +1,13 @@
-import = [
-  "~/.config/alacritty/themes/github-dark-default.toml"
-  # "~/.config/alacritty/themes/github-light-default.toml"
-]
 
 [font]
-normal = { family = "Cascadia Code" }
+# normal = { family = "Cascadia Code" }
 # normal = { family = "FantasqueSansM Nerd Font" }
 # normal = { family = "FantasqueSansM Nerd Font" }
 # normal = { family = "BlexMono Nerd Font Medium" }
 # normal = { family = "BlexMono Nerd Font" }
-size = 12.5
+normal = { family = "JetBrains Mono" }
+size = 12
+# size = 13
 
 [window]
 dynamic_padding = true
@@ -22,6 +20,13 @@ draw_bold_text_with_bright_colors = true
 
 [cursor]
 style = { blinking = "Always" }
+
+[general]
+import = [
+  # "~/.config/alacritty/themes/github-dark-default.toml"
+  # "~/.config/alacritty/themes/github-light-default.toml"
+  "~/.config/alacritty/themes/catppuccin-mocha.toml"
+]
 
 # [env]
 # term = "xterm-256color"

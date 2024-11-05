@@ -115,5 +115,13 @@ eval "$(~/.local/bin/mise activate zsh)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# pnpm
+export PNPM_HOME="/home/vomaksh/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # posh for prompt
-eval "$(oh-my-posh init zsh --config ~/.config/posh/themes/pure.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/posh/themes/space.omp.json)"
