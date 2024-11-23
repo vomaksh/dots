@@ -19,6 +19,9 @@ task :install do
   FileUtils.ln_s("#{base_path}/fuzzel", "#{target}/.config/fuzzel")
   FileUtils.ln_s("#{base_path}/mako", "#{target}/.config/mako")
 
+  # hypr
+  FileUtils.ln_s("#{base_path}/hypr", "#{target}/.config/hypr")
+
   # qt
   FileUtils.ln_s("#{base_path}/qt5ct", "#{target}/.config/qt5ct")
   FileUtils.ln_s("#{base_path}/qt6ct", "#{target}/.config/qt6ct")
@@ -47,6 +50,7 @@ task :uninstall do
     "#{target}/.config/nvim",
     "#{target}/.config/sway",
     "#{target}/.config/swaylock",
+    "#{target}/.config/hypr",
     "#{target}/.config/tmux",
     "#{target}/.config/waybar",
     "#{target}/.config/wlogout",
