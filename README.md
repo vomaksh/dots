@@ -11,8 +11,10 @@ It includes following configurations:
 - mako (notification daemon)
 - nvim (code editor)
 - niri (twm)
-- sway (twm) -> not using currently
+- sway (twm)
+- hyprland (twm)
 - swaylock (screen lock)
+- hyprpaper (wallpaper tool)
 - tmux (terminal multiplexer)
 - waybar (topbar)
 - wlogout (logout menu)
