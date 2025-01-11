@@ -1,0 +1,11 @@
+font-family = Cascadia Code
+font-size = 11.5
+# theme = xcodedarkhc
+# theme = Dracula+
+theme = Adwaita Dark
+# theme = Alabaster
+window-decoration = false
+window-theme = ghostty
+copy-on-select = true
+bold-is-bright = true
+gtk-wide-tabs = false

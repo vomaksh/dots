@@ -34,6 +34,7 @@ task :install do
 
   # terminal
   FileUtils.ln_s("#{base_path}/alacritty", "#{target}/.config/alacritty")
+  FileUtils.ln_s("#{base_path}/ghostty", "#{target}/.config/ghostty")
   FileUtils.ln_s("#{base_path}/wezterm", "#{target}/.config/wezterm")
   FileUtils.ln_s("#{base_path}/posh", "#{target}/.config/posh")
   FileUtils.ln_s("#{base_path}/foot", "#{target}/.config/foot")
@@ -43,6 +44,7 @@ task :uninstall do
   FileUtils.rm([
     "#{target}/.zshrc",
     "#{target}/.config/alacritty",
+    "#{target}/.config/ghostty",
     "#{target}/.config/wezterm",
     "#{target}/.config/foot",
     "#{target}/.config/posh",

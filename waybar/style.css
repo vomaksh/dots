@@ -1,6 +1,6 @@
 * {
-    font-family: 'Inter Variable', FontAwesome, Monocraft;
-    font-size: 14px;
+    font-family: 'Outfit', FontAwesome, Monocraft;
+    font-size: 20px;
 }
 
 window#waybar {
@@ -34,7 +34,7 @@ window#waybar.chromium {
 }
 
 #workspaces {
-    padding: 0;
+    padding: 4px;
     color: #ffffff;
     border-radius: 99px;
     background:

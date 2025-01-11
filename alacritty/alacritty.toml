@@ -1,14 +1,13 @@
 [font]
-# normal = { family = "Cascadia Code" }
-normal = { family = "JetBrains Mono" }
-size = 13
+normal = { family = "Cascadia Code" }
+size = 17
 
 [window]
 dynamic_title = true
 dynamic_padding = true
 opacity = 1
 blur = true
-decorations = "none"
+# decorations = "none"
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -23,5 +22,5 @@ style = { blinking = "Always" }
 import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 # import = ["~/.config/alacritty/themes/vscode-dark.toml"]
 
-[env]
-term = "xterm-256color"
+# [env]
+# term = "xterm-256color"
