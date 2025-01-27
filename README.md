@@ -30,6 +30,8 @@ This repository includes configurations for a variety of tools and applications 
 - [Mako](https://github.com/emersion/mako) – Lightweight Wayland notification daemon.
 - [Hyprpaper](https://github.com/hyprwm/hyprpaper) – Wallpaper management tool for Hyprland.
 - [Swaylock](https://github.com/swaywm/swaylock) – Screen locker for Wayland.
+- [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) – GTK based notification daemon for wayland compositors.
+- [SwayOSD](https://github.com/ErikReider/SwayOSD) – A GTK based OSD for wayland compositors.
 - [Wlogout](https://github.com/ArtsyMacaw/wlogout) – Customizable logout menu.
 
 ### 💻 Coding and Productivity

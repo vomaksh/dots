@@ -10,6 +10,8 @@ task :install do
   # sway
   FileUtils.ln_s("#{base_path}/sway", "#{target}/.config/sway")
   FileUtils.ln_s("#{base_path}/swaylock", "#{target}/.config/swaylock")
+  FileUtils.ln_s("#{base_path}/swayosd", "#{target}/.config/swayosd")
+  FileUtils.ln_s("#{base_path}/swaync", "#{target}/.config/swaync")
   FileUtils.ln_s("#{base_path}/waybar", "#{target}/.config/waybar")
   FileUtils.ln_s("#{base_path}/wlogout", "#{target}/.config/wlogout")
   FileUtils.ln_s("#{base_path}/gammastep", "#{target}/.config/gammastep")
@@ -52,6 +54,8 @@ task :uninstall do
     "#{target}/.config/nvim",
     "#{target}/.config/sway",
     "#{target}/.config/swaylock",
+    "#{target}/.config/swayosd",
+    "#{target}/.config/swaync",
     "#{target}/.config/hypr",
     "#{target}/.config/tmux",
     "#{target}/.config/waybar",

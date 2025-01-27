@@ -1,6 +1,6 @@
 * {
     font-family: 'Outfit', FontAwesome, Monocraft;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 window#waybar {
@@ -117,6 +117,7 @@ button:hover {
 }
 
 
+#custom-notification,
 #clock,
 #battery,
 #cpu,
@@ -144,7 +145,6 @@ button:hover {
     background-clip: padding-box, border-box;
     border: 3px solid transparent;
 }
-
 
 #window,
 #workspaces {
@@ -175,20 +175,17 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    color: #ffffff;
 }
 
 label:focus {
-    background-color: #000000;
+    background: #000000;
 }

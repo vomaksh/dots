@@ -3,12 +3,15 @@
     "layer": "top",
     "height": 32,
     "spacing": 4,
-    "modules-left": ["tray"],
+    "modules-left": [
+        "wlr/taskbar"
+    ],
     "modules-center": [
-        // "niri/workspaces"
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "tray",
+        "custom/notification",
         "clock",
         "backlight",
         "pulseaudio",
@@ -16,6 +19,47 @@
         "battery",
         "custom/power"
     ],
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 32,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "active-first": true
+    },
+    "niri/workspaces": {
+       "persistent-workspaces": {
+           "1": ["HDMI-A-1"],
+           "3": ["HDMI-A-1"],
+           "5": ["HDMI-A-1"],
+           "7": ["HDMI-A-1"],
+           "9": ["HDMI-A-1"],
+           "2": ["HDMI-A-1"],
+           "4": ["HDMI-A-1"],
+           "6": ["HDMI-A-1"],
+           "8": ["HDMI-A-1"],
+           "10": ["HDMI-A-1"],
+           // "1": ["eDP-1"],
+           // "3": ["eDP-1"],
+           // "5": ["eDP-1"],
+           // "7": ["eDP-1"],
+           // "9": ["eDP-1"],
+           // "2": ["eDP-1"],
+           // "4": ["eDP-1"],
+           // "6": ["eDP-1"],
+           // "8": ["eDP-1"],
+           // "10": ["eDP-1"],
+           // "eDP-1": [2, 4, 6, 8, 10],
+           // "HDMI-A-1": [1, 3, 5, 7, 9],
+           "HDMI-A-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+           // "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true,
+        "separate-outputs": true
+    },
     "hyprland/workspaces": {
        "persistent-workspaces": {
            "1": ["HDMI-A-1"],
@@ -44,18 +88,29 @@
            // "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
-    "niri/workspaces": {
-		"warp-on-scroll": false,
-		"disable-tooltip": true,
-		"disable-markup": true,
-		"format": " {} ",
-		"format-icons": {
-			"active": "󰪥",
-			"default": "󰄰"
-		}
-    },
     "tray": {
-        "spacing": 10
+        "spacing": 10,
+        "icon-size": 24
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{} {icon}",
+        "format-icons": {
+          "notification": "<span foreground='white'><sup></sup></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='white'><sup></sup></span>",
+          "dnd-none": "",
+          "inhibited-notification": "<span foreground='white'><sup></sup></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification": "<span foreground='white'><sup></sup></span>",
+          "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",

@@ -70,7 +70,7 @@ output "eDP-1" {
     mode "1920x1080@120.030"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.25
+    scale 1.0
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -90,7 +90,7 @@ output "eDP-1" {
 
 output "HDMI-A-1" {
     // off
-    scale 1.5
+    scale 1.0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -277,8 +277,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "alacritty"; }
-    // Mod+Return { spawn "ptyxis" "-s"; }
+    Mod+Return { spawn "ghostty"; }
     Mod+D { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
 
