@@ -1,4 +1,4 @@
-# vomaksh/dotfiles
+# vomaksh/dots
 
 ## Introduction
 
