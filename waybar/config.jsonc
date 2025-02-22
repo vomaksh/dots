@@ -8,6 +8,7 @@
     ],
     "modules-center": [
         "hyprland/workspaces"
+        // "niri/workspaces"
     ],
     "modules-right": [
         "tray",
