@@ -40,6 +40,9 @@ task :install do
   FileUtils.ln_s("#{base_path}/wezterm", "#{target}/.config/wezterm")
   FileUtils.ln_s("#{base_path}/posh", "#{target}/.config/posh")
   FileUtils.ln_s("#{base_path}/foot", "#{target}/.config/foot")
+
+  # code editors
+  FileUtils.ln_s("#{base_path}/zed", "#{target}/.config/zed")
 end
 
 task :uninstall do
@@ -65,5 +68,6 @@ task :uninstall do
     "#{target}/.config/mako",
     "#{target}/.config/qt5ct",
     "#{target}/.config/qt6ct",
+    "#{target}/.config/zed",
   ])
 end

@@ -1,6 +1,6 @@
 [font]
-normal = { family = "Cascadia Code" }
-size = 17
+normal = { family = "JetBrainsMono Nerd Font" }
+size = 13
 
 [window]
 dynamic_title = true
@@ -19,8 +19,8 @@ style = { blinking = "Always" }
 # import = ["~/.config/alacritty/themes/horizon-dark.toml"]
 # import = ["~/.config/alacritty/themes/github-dark-default.toml"]
 # import = ["~/.config/alacritty/themes/github-light-default.toml"]
-import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
-# import = ["~/.config/alacritty/themes/vscode-dark.toml"]
+# import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
+import = ["~/.config/alacritty/themes/vscode-dark.toml"]
 
 # [env]
 # term = "xterm-256color"

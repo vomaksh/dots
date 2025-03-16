@@ -1,10 +1,10 @@
 layer=top
 background-color=#171717
-border-size=2
+border-size=1
 border-color=#404040
 border-radius=4
 default-timeout=5000
-font=Google Sans 11
+font=Inter Display 10
 
 [urgency=high]
 layer=overlay
