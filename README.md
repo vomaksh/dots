@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This repository contains my personal configuration files and scripts, 
-designed to set up a consistent and efficient coding environment. 
+This repository contains my personal configuration files and scripts,
+designed to set up a consistent and efficient coding environment.
 It supports a variety of tools and applications to enhance productivity and streamline workflows.
 
 ## Supported Tools
@@ -36,6 +36,7 @@ This repository includes configurations for a variety of tools and applications 
 
 ### 💻 Coding and Productivity
 
+- [Zed](https://zed.dev/) - Blazing fast code editor
 - [Neovim](https://neovim.io/) – Powerful and extensible code editor.
 - [Tmux](https://github.com/tmux/tmux) – Terminal multiplexer.
 - [Zsh](https://www.zsh.org/) – Configurable shell.
@@ -56,6 +57,7 @@ Remove your previous configuration files which are already added in this reposit
 ### Install
 
 To install the dotfiles, run:
+
 ```sh
 rake install
 ```
@@ -63,11 +65,12 @@ rake install
 ### Uninstall
 
 To remove the dotfiles run:
+
 ```sh
 rake uninstall
 ```
 
 ## License
 
-This project is licensed under the **MIT License**. 
+This project is licensed under the **MIT License**.
 For more details, see the [LICENSE](https://github.com/vomaksh/dotfiles/blob/master/LICENSE).
