@@ -321,44 +321,16 @@ local lspconfig = require("lspconfig")
 local luasnip = require("luasnip")
 
 local lsp_list = {
-  "lua_ls",
-  "rust_analyzer",
-  "clangd",
-  "dockerls",
-  "docker_compose_language_service",
   "gopls",
   "pyright",
   "tsserver",
-  "yamlls",
-  "ansiblels",
-  "emmet_ls",
-  "sqlls",
-  "jsonls",
-  -- "efm",
-  "awk_ls",
-  "bashls",
-  "cssls",
-  -- "grammarly",
-  "graphql",
-  "html",
-  "marksman",
-  "tailwindcss",
-  "astro",
+  "lua_ls",
 }
 
 local formatters_linters_list = {
-  -- formatters
   "black", -- python
-  "stylua", -- lua
   "prettier", -- js/ts
-  "yamlfmt", -- yaml
-  "sqlfmt", -- sql
-  -- linters
-  "pylint", -- python
-  "eslint", -- js/ts
-  "vale", -- markdown
-  "markdownlint", -- markdown
-  "sqlfluff", -- sql
+  "eslint"
 }
 
 require("mason").setup()
@@ -480,17 +452,11 @@ require("formatter").setup({
   logging = true,
   log_level = vim.log.levels.WARN,
   filetype = {
-    lua = {
-      require("formatter.filetypes.lua").stylua,
-    },
     typescript = {
       require("formatter.filetypes.typescript").prettier,
     },
     typescriptreact = {
       require("formatter.filetypes.typescript").prettier,
-    },
-    toml = {
-      require("formatter.filetypes.toml").taplo,
     },
     javascript = {
       require("formatter.filetypes.javascript").prettier,
@@ -510,12 +476,6 @@ require("formatter").setup({
     go = {
       require("formatter.filetypes.go").gofmt,
     },
-    sql = {
-      require("formatter.filetypes.sql").pgformat,
-    },
-    markdown = {
-      require("formatter.filetypes.markdown").prettier,
-    },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace,
     },
@@ -524,11 +484,9 @@ require("formatter").setup({
 
 -- linters
 require("lint").linters_by_ft = {
-  markdown = { "vale", "markdownlint" },
   javascript = { "eslint" },
   javascriptreact = { "eslint" },
   typescript = { "eslint" },
   typescriptreact = { "eslint" },
-  python = { "pylint" },
-  sql = { "sqlfluff" },
+  python = { "black" },
 }

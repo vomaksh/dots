@@ -8,18 +8,18 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "vim_mode": true,
-  "ui_font_size": 14,
+  "ui_font_size": 16,
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 14,
+  "buffer_font_size": 18,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_line_height": "standard",
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font",
-    "font_size": 14
+    "font_size": 16
   },
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Github Dark"
+    "mode": "dark",
+    "light": "Oxocarbon Light (IBM Carbon)",
+    "dark": "Oxocarbon Dark (IBM Carbon)"
   }
 }
