@@ -14,13 +14,13 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term ghostty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 
 # for_window [title="^.*"] title_format ""
-font pango:0xProto Nerd Font 11
+font pango:CaskaydiaCove NF 11
 default_border pixel 2
 client.focused "#3b82f6" "#3b82f6" "#ffffff" "#3b82f6"
 
@@ -32,14 +32,14 @@ gaps inner 4
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/hu-chen--ibpQdaorT8-unsplash.jpg fill
+output * bg ~/Pictures/Wallhaven/wallhaven-2y3keg.png fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 scale 1.25
+output eDP-1 scale 2.25
 # output eDP-1 disable
 output HDMI-A-1 scale 1.5
 output HDMI-A-1 disable
@@ -71,7 +71,7 @@ input type:touchpad {
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec j4-dmenu-desktop --dmenu="bemenu --ignorecase"
+    bindsym $mod+d exec fuzzel
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -218,8 +218,8 @@ bindsym XF86AudioLowerVolume exec volumectl -u down
 bindsym XF86AudioMute exec volumectl toggle-mute
 bindsym XF86AudioMicMute exec volumectl -m toggle-mute
 
-bindsym XF86MonBrightnessUp exec lightctl up
-bindsym XF86MonBrightnessDown exec lightctl down
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # screenshot
 bindsym $mod+p exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S.png')

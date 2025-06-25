@@ -109,7 +109,7 @@ alias wezterm="flatpak run org.wezfurlong.wezterm"
 export PATH="$PATH:/home/vomaksh/.local/bin:/home/vomaksh/bin"
 alias lzd='lazydocker'
 alias lzg='lazygit'
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # go
 export GOPATH=$HOME/go
@@ -125,3 +125,11 @@ esac
 
 # posh for prompt
 eval "$(oh-my-posh init zsh --config ~/.config/posh/themes/space.omp.json)"
+
+# aliases for kubectl for different environments
+alias kme='kubectl --kubeconfig ~/.kube/k3s.yaml'
+alias kzeno='kubectl --kubeconfig ~/.kube/zeno.yaml'
+
+# fix home and end keys
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line

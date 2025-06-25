@@ -7,19 +7,26 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Material Icon Theme",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 15,
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 18,
+  "buffer_font_size": 15,
   "buffer_font_family": "JetBrainsMono Nerd Font",
+  // "buffer_font_family": "CaskaydiaCove Nerd Font",
   "buffer_line_height": "standard",
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font",
-    "font_size": 16
+    "font_size": 14,
+    "line_height": "standard"
   },
   "theme": {
     "mode": "dark",
-    "light": "Oxocarbon Light (IBM Carbon)",
-    "dark": "Oxocarbon Dark (IBM Carbon)"
+    "light": "Fleet Light",
+    "dark": "Fleet Dark"
   }
 }

@@ -1,19 +1,21 @@
 * {
-  font-family: "Inter Display", FontAwesome, Monocraft;
+  font-family: "JetBrainsMono NF", "CaskaydiaCove NF", "Adwaita Sans", FontAwesome, Monocraft;
   font-size: 14px;
 }
 
 #waybar {
-  background: transparent;
-  color: #f0f0f0;
+  background: linear-gradient(rgba(40, 40, 40, 1), rgba(40, 40, 40, 1));
+  /* background: transparent; */
+  /* color: #f0f0f0; */
+  /* background: #6b7280; */
 }
 
-#workspaces {
-  padding: 0px;
-  color: #f0f0f0;
-  border-radius: 99px;
-  background-clip: padding-box, border-box;
-}
+/* #workspaces { */
+/*   padding: 0px; */
+/*   color: #f0f0f0; */
+/*   border-radius: 99px; */
+/*   background-clip: padding-box, border-box; */
+/* } */
 
 #workspaces button {
   padding: 0px;
@@ -21,6 +23,10 @@
 }
 
 #workspaces button.active {
+  color: #fafafa;
+}
+
+#workspaces button.visible {
   color: #fafafa;
 }
 
@@ -49,7 +55,6 @@
   background: linear-gradient(rgba(40, 40, 40, 1), rgba(40, 40, 40, 1))
       padding-box,
     linear-gradient(90deg, #8ec07c, #d5c4a1) border-box;
-  border-radius: 99px;
-  padding: 0 10px;
-  border: 2px solid transparent;
+  padding: 0px 10px;
+  /* border-bottom: 2px solid red; */
 }

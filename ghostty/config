@@ -1,11 +1,14 @@
-font-family = JetBrainsMono Nerd Font
-font-size = 13
-# theme = xcodedarkhc
-# theme = Dracula+
-theme = Adwaita Dark
-# theme = Alabaster
+font-family = CaskaydiaCove NF
+# font-family = JetBrainsMono NF
+font-size = 12
+# font-size = 13
+# theme = GitHub-Dark-Default
+# theme = Dark Modern
+theme = carbonfox
 window-theme = ghostty
 copy-on-select = true
 bold-is-bright = true
 gtk-wide-tabs = false
-# window-decoration = false
+
+# keybindings
+keybind = ctrl+shift+d=toggle_window_decorations

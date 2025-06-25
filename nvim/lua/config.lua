@@ -44,29 +44,6 @@ require("lazy").setup({
   "norcalli/nvim-colorizer.lua",
   "kevinhwang91/promise-async",
   "kevinhwang91/nvim-ufo",
-  {
-    "Shatur/neovim-ayu",
-    -- lazy = false,
-    -- priority = 1000,
-  },
-  {
-    "projekt0n/github-nvim-theme",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("github-theme").setup({
-        options = {
-          transparent = true,
-          styles = {
-            comments = "italic",
-            keywords = "bold",
-            types = "italic,bold",
-          },
-        },
-      })
-      vim.cmd("colorscheme github_dark_default")
-    end,
-  },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   {
     "nvim-lualine/lualine.nvim",
@@ -80,28 +57,19 @@ require("lazy").setup({
     },
   },
   { "rebelot/kanagawa.nvim", priority = 1000 },
-  {
-    "Mofiqul/vscode.nvim",
-    lazy = false,
-    priority = 1000,
-    -- config = function()
-    --   vim.o.background = "dark"
-    --   require("vscode").setup({
-    --     transparent = false,
-    --     italic_comments = true,
-    --     underline_links = true,
-    --     disable_nvimtree_bg = true,
-    --   })
-    --   vim.cmd.colorscheme("vscode")
-    -- end,
-  },
+  { "EdenEast/nightfox.nvim", priority = 1000 },
   -- Telescope
   "nvim-lua/plenary.nvim",
   "nvim-telescope/telescope.nvim",
   -- lsp, linters, formatters plugins
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig",
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+  },
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-buffer",
@@ -207,51 +175,17 @@ require("nvim-tree").setup({
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<cr>", {})
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFocus<cr>", {})
 
--- set colorscheme
--- if vim.env.SYSTEM_THEME == "light" then
---   require("github-theme").setup({
---     options = {
---       transparent = true,
---     },
---   })
---   vim.cmd("colorscheme github_light")
--- else
--- local colors = require("ayu.colors")
--- colors.generate(true)
--- require("ayu").setup({
---   mirage = true,
---   overrides = function()
---     return {
---       Comment = { fg = colors.comment },
---       Normal = { bg = "None" },
---       ColorColumn = { bg = "None" },
---       SignColumn = { bg = "None" },
---       Folded = { bg = "None" },
---       FoldColumn = { bg = "None" },
---       CursorLine = { bg = "None" },
---       CursorColumn = { bg = "None" },
---       WhichKeyFloat = { bg = "None" },
---       VertSplit = { bg = "None" },
---     }
---   end,
--- })
--- vim.cmd("colorscheme ayu")
--- end
-
--- require("kanagawa").setup({
---   theme = "dragon",
---   undercurl = false,
---   dimInactive = false,
---   background = {
---     dark = "dragon",
---     light = "lotus",
---   },
--- })
-
--- vim.o.background = "dark"
--- vim.cmd([[ colorscheme kanagawa ]])
-
--- vim.cmd([[ colorscheme arctic ]])
+require('nightfox').setup({
+  options = {
+    transparent = true,
+    styles = {
+      comments = "italic",
+      keywords = "bold",
+      types = "italic,bold",
+    }
+  }
+})
+vim.cmd("colorscheme nordfox")
 
 -- colorizer setup
 require("colorizer").setup()
@@ -323,7 +257,7 @@ local luasnip = require("luasnip")
 local lsp_list = {
   "gopls",
   "pyright",
-  "tsserver",
+  "ts_ls",
   "lua_ls",
 }
 
@@ -333,7 +267,7 @@ local formatters_linters_list = {
   "eslint"
 }
 
-require("mason").setup()
+-- require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = lsp_list,
 })

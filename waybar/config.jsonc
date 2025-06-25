@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 20,
-  "modules-left": ["niri/workspaces"],
+  "modules-left": ["niri/workspaces", "cffi/niri-taskbar"],
   "modules-center": ["clock"],
-  "modules-right": ["tray", "network", "pulseaudio", "battery", "cpu", "custom/power"],
+  "modules-right": ["tray", "network", "pulseaudio", "battery", "memory", "cpu", "custom/notification", "custom/power"],
   "niri/workspaces": {
     "persistent-workspaces": {
       //    "1": ["HDMI-A-1"],
@@ -31,6 +31,32 @@
       "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
   },
+  "sway/workspaces": {
+    "on-click": "activate",
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": ["eDP-1"],
+      "3": ["eDP-1"],
+      "5": ["eDP-1"],
+      "7": ["eDP-1"],
+      "9": ["eDP-1"],
+      "2": ["eDP-1"],
+      "4": ["eDP-1"],
+      "6": ["eDP-1"],
+      "8": ["eDP-1"],
+      "10": ["eDP-1"],
+      "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "󰵅",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw"
+  },
+  "cffi/niri-taskbar": {
+    "module_path": "/opt/waybar/modules/libniri_taskbar.so"
+  },
   "tray": {
     "icon-size": 16,
     "spacing": 10
@@ -40,27 +66,27 @@
     "tooltip": true
   },
   "network": {
-    "format-wifi": "   {essid} {signalStrength}%",
+    "format-wifi": "  {essid} {signalStrength}%",
     "format-ethernet": "Eth: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}% ",
-    "format-bluetooth": "{icon}  {volume}% ",
-    "format-muted": " ",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "󰝟",
     "format-icons": {
-      "alsa_output.pci-0000_00_1f.3.analog-stereo": " ",
-      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "phone-muted": " ",
-      "portable": " ",
-      "car": " ",
-      "default": [" ", " "]
+      // "alsa_output.pci-0000_00_1f.3.analog-stereo": " ",
+      // "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "󰋎",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
+    "on-click": "flatpak run com.saivert.pwvucontrol",
     "ignored-sinks": ["Easy Effects Sink"]
   },
   "battery": {
@@ -70,15 +96,20 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}% ",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
   },
   "cpu": {
-    "format": "CPU: {usage}%"
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}G/{total:0.1f}G"
   },
   "custom/power": {
-    "format": "⏻  Menu",
-    "tooltip": "Power",
+    "format": "󰍜",
+    "tooltip": "Power Menu",
     "on-click": "wlogout"
   }
 }
