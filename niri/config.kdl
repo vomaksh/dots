@@ -85,16 +85,17 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
+    // position x=1280 y=0
 }
 
-output "HDMI-A-1" {
+output "DP-3" {
     // off
-    scale 1.0
+    scale 1.5
 }
 
 environment {
     DISPLAY ":0"
+    QT_QPA_PLATFORM "wayland"
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -296,7 +297,8 @@ binds {
     Mod+A { toggle-column-tabbed-display; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "ghostty"; }
+    // Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "alacritty"; }
     Mod+D { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
 
